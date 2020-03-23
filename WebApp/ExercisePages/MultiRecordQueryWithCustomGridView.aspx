@@ -20,48 +20,49 @@
                 <asp:TemplateField HeaderText="ID" Visible="True">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                     <ItemTemplate>
-                        <asp:Label ID="ProductID" runat="server" 
-                            Text='<%# Eval("ProductID") %>'></asp:Label>
+                        <asp:Label ID="PlayerID" runat="server" 
+                            Text='<%# Eval("PlayerID") %>'></asp:Label>
                         
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Product">
+                <asp:TemplateField HeaderText="Player">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                     <ItemTemplate>
                         <%-- this is where your reference to the data on your
                               record is placed--%>
-                        <asp:Label ID="ProductName" runat="server" 
-                            Text='<%# Eval("ProductName") %>'></asp:Label>
+                        <asp:Label ID="Name" runat="server" 
+                            Text='<%# Eval("Name") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Qty/Per">
+                <asp:TemplateField HeaderText="Age" Visible="True">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
-                     <ItemTemplate>
-                        <asp:Label ID="QuantityPerUnit" runat="server" 
-                            Text='<%# Eval("QuantityPerUnit") == null ? "each" : Eval("QuantityPerUnit") %>'></asp:Label>
+                    <ItemTemplate>
+                        <asp:Label ID="Age" runat="server" 
+                            Text='<%# Eval("Age") %>'></asp:Label>
                         
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Price ($)">
-                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
-
+                <asp:TemplateField HeaderText="Gender">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
-                     <ItemTemplate>
-                        <asp:Label ID="UnitPrice" runat="server" 
-                            Text='<%# string.Format("{0:0.00}",Eval("UnitPrice"))%>'></asp:Label>
-                        
+                    <ItemTemplate>
+                        <%-- this is where your reference to the data on your
+                              record is placed--%>
+                        <asp:Label ID="Gender" runat="server" 
+                            Text='<%# Eval("Gender") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Disc">
+                <asp:TemplateField HeaderText="MedicalAlbertDetail">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
-                     <ItemTemplate>
-                         <asp:CheckBox ID="Discontinued" runat="server" 
-                              Checked='<%# Eval("Discontinued") %>'/>
+                    <ItemTemplate>
+                        <%-- this is where your reference to the data on your
+                              record is placed--%>
+                        <asp:Label ID="MedicalAlbertDetail" runat="server" 
+                            Text='<%# Eval("MedicalAlbertDetail") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
             <EmptyDataTemplate>
-                whatever message string you use is printed if there is no data to display
+                No data avaliable at this time
             </EmptyDataTemplate>
             <PagerSettings FirstPageText="Start" LastPageText="End" Mode="NumericFirstLast" PageButtonCount="3" />
         </asp:GridView>

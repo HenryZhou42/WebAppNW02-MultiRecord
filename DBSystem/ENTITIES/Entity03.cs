@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DBSystem.ENTITIES
 {
-    [Table("Suppliers")]
+    [Table("Guardian")]
     public class Entity03
     {
         [Key]

@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DBSystem.ENTITIES
 {
-    [Table("Categories")]
+    [Table("Team")]
     public class Entity01
     {
         [Key]
@@ -17,7 +17,7 @@ namespace DBSystem.ENTITIES
         public string TeamName { get; set; }
         public string Coach { get; set; }
         public string AssistantCoach { get; set; }
-        public int? Win { get; set; }
+        public int? Wins { get; set; }
         public int? Losses { get; set; }
         //public byte[] Picture { get; set; }
         //public string PictureMimeType { get; set; }

@@ -70,8 +70,8 @@ namespace WebApp.ExercisePages
         protected void List02_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow agvrow = List02.Rows[List02.SelectedIndex];
-            string productid = (agvrow.FindControl("PlayerID") as Label).Text;
-            Response.Redirect("ReceivingPage.aspx?pid=" + productid);
+            string PlayerID = (agvrow.FindControl("PlayerID") as Label).Text;
+            Response.Redirect("ReceivingPage.aspx?pid=" + PlayerID);
         }
     }
 }

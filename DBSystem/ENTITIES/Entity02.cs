@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DBSystem.ENTITIES
 {
-    [Table("Products")]
+    [Table("Player")]
     public class Entity02
     {
         [Key]
@@ -21,7 +21,7 @@ namespace DBSystem.ENTITIES
         public int Age { get; set; }
         public string Gender { get; set; }
         public string AlbertaHealthCareNumber { get; set; }
-        public string MedicalAlbertDetail { get; set; }
+        public string MedicalAlertDetails { get; set; }
         
 
         [NotMapped]

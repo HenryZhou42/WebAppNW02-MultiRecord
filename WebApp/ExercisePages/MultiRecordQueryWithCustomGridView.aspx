@@ -2,12 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <h1> Multi Record Query with Custom GridView</h1>
     <div class="offset-2">
-        <asp:Label ID="Label1" runat="server" Text="Select an Item: "></asp:Label>&nbsp;&nbsp;   
+        <asp:Label ID="Label1" runat="server" Text="Select an Team: "></asp:Label>&nbsp;&nbsp;   
         <asp:DropDownList ID="List01" runat="server"></asp:DropDownList>&nbsp;&nbsp;
         <asp:Button ID="Fetch" runat="server" Text="Fetch" 
              CausesValidation="false" OnClick="Fetch_Click"/>
         <br /><br />
-        <asp:Label ID="MessageLabel" runat="server" ></asp:Label>
+        <asp:Label ID="MessageLabel" runat="server" >
+        </asp:Label>
         <br />
         <asp:GridView ID="List02" runat="server" 
             AutoGenerateColumns="False"
@@ -15,8 +16,6 @@
              BorderStyle="None" AllowPaging="True" OnPageIndexChanging="List02_PageIndexChanging" PageSize="5" OnSelectedIndexChanged="List02_SelectedIndexChanged">
 
             <Columns>
-                <asp:CommandField SelectText="View" ShowSelectButton="True" 
-                    ButtonType="Button" CausesValidation="false"></asp:CommandField>
                 <asp:TemplateField HeaderText="ID" Visible="True">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                     <ItemTemplate>
@@ -51,13 +50,13 @@
                             Text='<%# Eval("Gender") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="MedicalAlbertDetail">
+                <asp:TemplateField HeaderText="MedicalAlertDetails">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                     <ItemTemplate>
                         <%-- this is where your reference to the data on your
                               record is placed--%>
-                        <asp:Label ID="MedicalAlbertDetail" runat="server" 
-                            Text='<%# Eval("MedicalAlbertDetail") %>'></asp:Label>
+                        <asp:Label ID="MedicalAlertDetails" runat="server" 
+                            Text='<%# Eval("MedicalAlertDetails") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
